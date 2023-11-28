@@ -105,6 +105,13 @@
     gap: 10px;
 }
 
+.agent-name-desc-container h3 {
+    color: #FFF;
+    font-family: Anton;
+    font-size: 40px;
+    font-weight: 400;
+}
+
 /* CONTAINER DE LA INFO DEL PERSONAJE Y LA IMAGEN */
 .web-agent-content-container {
     display: flex;
