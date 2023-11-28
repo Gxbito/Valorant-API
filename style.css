@@ -1,0 +1,181 @@
+/* FONTS */
+
+/* "VALORANT" FONT */
+@import url('https://fonts.cdnfonts.com/css/valorant');
+
+/* "ANTON" FONT */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+/* "DIN NEXT LT PRO REGULAR" FONT */
+@import url(https://db.onlinewebfonts.com/c/93a467f70a3e7b27a9b52a686f351dbe?family=DIN+Next+LT+Pro+Regular);
+
+/* "UNDERRATED" FONT */
+@import url('https://fonts.cdnfonts.com/css/underrated');
+
+/* "THE BOLD FONT" FONT*/
+@import url('https://fonts.cdnfonts.com/css/the-bold-font');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #050303;
+    --secondary-color: #FC4754;
+    --text-color: #ffffff;
+}
+
+.web-content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-image: url(/img/Background-img.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-left: 50px;
+    overflow-x: hidden;
+    padding-top: 50px;
+}
+
+/* CONTAINER DE ACLARACION DE API Y TITULO DE WEB */
+.web-title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* PRIMER Y SEGUNDA PALABRA DE ACLARACION DE API */
+.web-title-container h4,
+.web-title-container h4>b {
+    color: var(--text-color);
+    text-align: center;
+    font-family: VALORANT;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* SEGUNDA PALABRA DE ACLARACION DE API */
+.web-title-container h4>b {
+    color: var(--secondary-color);
+}
+
+/* PRIMER Y SEGUNDA PALABRA DEL TITULO */
+.web-title-container h1,
+.web-title-container h1>b {
+    color: var(--text-color);
+    text-align: center;
+    font-family: VALORANT;
+    font-size: 80px;
+    font-weight: 400;
+}
+
+/* SEGUNDA PALABRA DEL TITULO (FINDER) */
+.web-title-container h1>b {
+    color: var(--secondary-color)
+}
+
+/* CONTAINER DEL INPUT */
+.input-container {
+    margin-top: 45px;
+}
+
+/* CONTAINER DE INFO DE PERSONAJE (NOMBRE, DESCRIPCION, HABILIDAD, DESCRIPCION DE HABILIDAD, CAJA DE CAMBIADOR DE HABILIDAD), VA A LA PARTE IZQUIERDA O PARTE DE ABAJO */
+.web-input-agent-info-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+/* CONTAINER DEL NOMBRE Y HABILIDAD DE PERSONAJE, Y DESCRIPCION DE PERSONAJE Y DE HABILIDAD */
+.agent-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* CONTAINER DE NOMBRE Y DESCRIPCION DE PERSONAJE*/
+.agent-name-desc-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* CONTAINER DE LA INFO DEL PERSONAJE Y LA IMAGEN */
+.web-agent-content-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* INPUT DE LA WEB */
+.input-container input {
+    /* ESTILO DEL INPUT */
+    border-radius: 35px;
+    border: 1px solid #FC4754;
+    background: rgba(5, 3, 3, 0.40);
+    height: 40px;
+    width: 250px;
+    padding: 0px 18px;
+    transition: all 0.5s ease;
+
+    /* ESTILO DEL TEXTO AL ESCRIBIR EN EL INPUT */
+    color: rgba(255, 255, 255, 0.938);
+    font-family: DIN Next LT Pro;
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+/* INPUT AL PASAR EL MOUSE */
+.input-container input:hover {
+    box-shadow: 0px 0px 25.5px 0px rgba(252, 71, 84, 0.52);
+}
+
+/* CONTENIDO DEL INPUT ANTES DE ESCRIBIR */
+.input-container input::placeholder {
+    color: rgba(179, 179, 179, 0.938);
+    font-family: DIN Next LT Pro;
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+/* INPUT AL DAR CLICK */
+.input-container input:focus-visible {
+    outline: none;
+}
+
+/* CONTAINER DE LA IMAGEN DEL PERSONAJE Y TEXTO DE FONDO */
+.web-agent-img-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: 170px;
+}
+
+/* IMAGEN DEL PERSONAJE */
+.agent-img {
+    background-image: url(https://media.valorant-api.com/agents/5f8d3a7f-467b-97f3-062c-13acf203c006/fullportrait.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 800px;
+    width: 600px;
+    position: relative;
+    z-index: 2;
+}
+
+/* TEXTO DE FONDO DEL PERSONAJE */
+.web-agent-img-container p {
+    position: absolute;
+    z-index: 1;
+    font-family: Anton;
+    font-size: 200px;
+    font-weight: 400;
+    transform: rotate(90deg);
+    right: -115px;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.446);
+}
