@@ -39,6 +39,7 @@
     padding-left: 50px;
     overflow-x: hidden;
     padding-top: 50px;
+    height: 100vh;
 }
 
 /* CONTAINER DE ACLARACION DE API Y TITULO DE WEB */
@@ -55,7 +56,7 @@
     color: var(--text-color);
     text-align: center;
     font-family: VALORANT;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 400;
 }
 
@@ -82,41 +83,6 @@
 /* CONTAINER DEL INPUT */
 .input-container {
     margin-top: 45px;
-}
-
-/* CONTAINER DE INFO DE PERSONAJE (NOMBRE, DESCRIPCION, HABILIDAD, DESCRIPCION DE HABILIDAD, CAJA DE CAMBIADOR DE HABILIDAD), VA A LA PARTE IZQUIERDA O PARTE DE ABAJO */
-.web-input-agent-info-container {
-    display: flex;
-    flex-direction: column;
-    margin-top: 40px;
-}
-
-/* CONTAINER DEL NOMBRE Y HABILIDAD DE PERSONAJE, Y DESCRIPCION DE PERSONAJE Y DE HABILIDAD */
-.agent-text-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-/* CONTAINER DE NOMBRE Y DESCRIPCION DE PERSONAJE*/
-.agent-name-desc-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.agent-name-desc-container h3 {
-    color: #FFF;
-    font-family: Anton;
-    font-size: 40px;
-    font-weight: 400;
-}
-
-/* CONTAINER DE LA INFO DEL PERSONAJE Y LA IMAGEN */
-.web-agent-content-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
 }
 
 /* INPUT DE LA WEB */
@@ -155,12 +121,106 @@
     outline: none;
 }
 
+/* CONTAINER DE LA INFO DEL PERSONAJE Y LA IMAGEN */
+.web-agent-content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* CONTAINER DE INFO DE PERSONAJE 
+(NOMBRE, DESCRIPCION, HABILIDAD, DESCRIPCION DE HABILIDAD, CAJA DE CAMBIADOR DE HABILIDAD)
+VA A LA PARTE IZQUIERDA (EN ESCRITORIO) O PARTE DE ABAJO (EN MOVIL) */
+.web-agent-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 100px;
+    margin-top: 40px;
+    width: 50%;
+}
+
+/* CONTAINER DEL NOMBRE Y HABILIDAD DE PERSONAJE, Y DESCRIPCION DE PERSONAJE Y DE HABILIDAD */
+.agent-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+/* CONTAINER DE NOMBRE Y DESCRIPCION DE PERSONAJE */
+/* CONTAINER DE NOMBRE DE HABILIDAD Y DESCRIPCION DE HABILIDAD */
+.agent-name-desc-container,
+.agent-ability-desc-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* NOMBRE DE PERSONAJE */
+/* NOMBRE DE HABILIDAD */
+.agent-name-desc-container h3,
+.agent-ability-desc-container h3 {
+    color: var(--text-color);
+    font-family: Anton;
+    font-size: 23px;
+    font-weight: 400;
+}
+
+/* DESCRIPCION DE PERSONAJE */
+/* DESCRIPCION DE HABILIDAD */
+.agent-name-desc-container p,
+.agent-ability-desc-container p {
+    color: var(--text-color);
+    font-family: DIN Next LT Pro;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* CONTAINER DE CAMBIADOR DE HABILIDIDAD (AL HACER CLICK EN UN ICONO SE HABILITA UN COLOR Y RENDERIZA LA DESCRIPCION DE LA HABILIDAD CORRESPONDIENTE) */
+.agent-ability-changer-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+}
+
+/* ESTILO DE TODAS LAS HABILIDADES */
+.ability {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    background-image: url(/img/Border-Ability-img.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 15px;
+}
+
+.ability img {
+    background-color: var(--main-color);
+    height: 80px;
+    width: 80px;
+    padding: 10px;
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 95% 95%, 95% 100%, 0 100%);
+}
+
+/* ESTILO AL CLICKEAR */
+.ability-active {
+    background-color: var(--secondary-color);
+}
+
 /* CONTAINER DE LA IMAGEN DEL PERSONAJE Y TEXTO DE FONDO */
 .web-agent-img-container {
     display: flex;
     align-items: center;
     position: relative;
-    bottom: 170px;
+    bottom: 280px;
+    margin-bottom: -200px;
 }
 
 /* IMAGEN DEL PERSONAJE */
@@ -170,9 +230,10 @@
     background-size: cover;
     background-position: center;
     height: 800px;
-    width: 600px;
+    width: 700px;
     position: relative;
     z-index: 2;
+    filter: drop-shadow(20px 0px 0px var(--secondary-color));
 }
 
 /* TEXTO DE FONDO DEL PERSONAJE */
@@ -180,9 +241,10 @@
     position: absolute;
     z-index: 1;
     font-family: Anton;
-    font-size: 200px;
+    font-size: 170px;
     font-weight: 400;
     transform: rotate(90deg);
-    right: -115px;
+    right: -70px;
+    color: #00000000;
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.446);
 }
