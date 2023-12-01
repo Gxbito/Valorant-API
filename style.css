@@ -95,6 +95,8 @@
     width: 250px;
     padding: 0px 18px;
     transition: all 0.5s ease;
+    position: relative;
+    z-index: 40;
 
     /* ESTILO DEL TEXTO AL ESCRIBIR EN EL INPUT */
     color: rgba(255, 255, 255, 0.938);
@@ -133,7 +135,6 @@
 VA A LA PARTE IZQUIERDA (EN ESCRITORIO) O PARTE DE ABAJO (EN MOVIL) */
 .web-agent-info-container {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
     gap: 100px;
@@ -192,8 +193,8 @@ VA A LA PARTE IZQUIERDA (EN ESCRITORIO) O PARTE DE ABAJO (EN MOVIL) */
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     background-image: url(/img/Border-Ability-img.svg);
     background-position: center;
     background-repeat: no-repeat;
@@ -203,8 +204,8 @@ VA A LA PARTE IZQUIERDA (EN ESCRITORIO) O PARTE DE ABAJO (EN MOVIL) */
 
 .ability img {
     background-color: var(--main-color);
-    height: 80px;
-    width: 80px;
+    height: 75px;
+    width: 75px;
     padding: 10px;
     clip-path: polygon(0 0, 100% 0, 100% 95%, 95% 95%, 95% 100%, 0 100%);
 }
@@ -219,21 +220,21 @@ VA A LA PARTE IZQUIERDA (EN ESCRITORIO) O PARTE DE ABAJO (EN MOVIL) */
     display: flex;
     align-items: center;
     position: relative;
-    bottom: 280px;
-    margin-bottom: -200px;
+    bottom: 340px;
+    left: -100px;
+    /* margin-bottom: -200px; */
 }
 
 /* IMAGEN DEL PERSONAJE */
 .agent-img {
-    background-image: url(https://media.valorant-api.com/agents/5f8d3a7f-467b-97f3-062c-13acf203c006/fullportrait.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 800px;
-    width: 700px;
+    width: 900px;
+    height: 900px;
     position: relative;
     z-index: 2;
     filter: drop-shadow(20px 0px 0px var(--secondary-color));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* TEXTO DE FONDO DEL PERSONAJE */
@@ -244,7 +245,10 @@ VA A LA PARTE IZQUIERDA (EN ESCRITORIO) O PARTE DE ABAJO (EN MOVIL) */
     font-size: 170px;
     font-weight: 400;
     transform: rotate(90deg);
-    right: -70px;
+    right: -60px;
+    bottom: 230px;
     color: #00000000;
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.446);
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.718);
+    text-transform: uppercase;
+    width: 715px;
 }

@@ -31,12 +31,14 @@ async function searchAgent(e) {
     (item) => input.value === item.displayName
   );
   agentAbilities = agentSelected.abilities;
-  abilityIcon = agentAbilities.map((item) => item.displayIcon)
+  abilityIcon = agentAbilities.map((item) => item.displayIcon);
+  abilityDesc = agentAbilities.map((item) => item.displayIcon);
 
   nameDescContainer.innerHTML = agentTemplateNameAndDesc(agentSelected);
-  // abilityDescContainer.innerHTML = agentTemplateAbilitieAndDesc(agentAbilities);
-  abilitySelectorContainer.innerHTML = agentTemplateAbilitySelector(abilityIcon);
-  // agentPortrairContainer.innerHTML = agentTemplatePortrait(agent);
+  abilityDescContainer.innerHTML = agentTemplateAbilitieAndDesc(agentAbilities);
+  abilitySelectorContainer.innerHTML =
+    agentTemplateAbilitySelector(abilityIcon);
+  agentPortrairContainer.innerHTML = agentTemplatePortrait(agentSelected);
 }
 
 function agentTemplateNameAndDesc(data) {
@@ -54,23 +56,24 @@ function agentTemplateNameAndDesc(data) {
 }
 
 function agentTemplateAbilitieAndDesc(data) {
-  // const { displayName, description} = data;
+  abilityName = data.map((item) => item.displayName);
+  abilityDesc = data.map((item) => item.description);
+
+  console.log(abilityName);
 
   return `
     <!-- NOMBRE DE HABILIDAD DE PERSONAJE -->
-    <h3></h3>
+    <h3>${abilityName[0]}</h3>
 
     <!-- DESCRIPCION DE HABILIDAD DE PERSONAJE -->
     <p>
-      
+      ${abilityDesc[0]}
     </p>
   `;
 }
 
 function agentTemplateAbilitySelector(data) {
-  
   return `
-  <img src=${data[0]} alt="" data-id="Ability1">
     <!-- CONTAINER DE HABILIDAD 1 -->
     <div class="agent-ability-1 ability">
 
@@ -106,19 +109,20 @@ function agentTemplateAbilitySelector(data) {
 }
 
 function agentTemplatePortrait(data) {
-
+  const { fullPortrait, displayName } = data;
 
   return `
-  <!-- IMAGEN DE PERSONAJE -->
-        <div class="agent-img"></div>
-
     <!-- TEXTO DE FONDO DE LA IMAGEN -->
-    <p>BREACH</p>
+    <div class="agent-img" style="background-image: url(${fullPortrait});"></div>
+    <p>${displayName}</p>
   `;
 }
 
+function abilitySelected() {}
+
 function init() {
   inputContainer.addEventListener("submit", searchAgent);
+  abilitySelectorContainer.addEventListener("click", abilitySelected);
 }
 
 init();

@@ -1,73 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Agent Finder</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/style.css" />
-  <title>Agent Finder</title>
-</head>
+  <body>
+    <!-- CONTAINER DE TODA LA WEB -->
+    <div class="web-content-container">
+      <!-- CONTAINER DE ACLARACION DE API ("VALORANT API") + TITULO DE LA WEB ("AGENT FINDER") -->
+      <div class="web-title-container">
+        <!-- ACLARACION DE API -->
+        <h4>VALORANT.<b>API</b></h4>
 
-<body>
-  <!-- CONTAINER DE TODA LA WEB -->
-  <div class="web-content-container">
-
-    <!-- CONTAINER DE ACLARACION DE API ("VALORANT API") + TITULO DE LA WEB ("AGENT FINDER") -->
-    <div class="web-title-container">
-
-      <!-- ACLARACION DE API -->
-      <h4>VALORANT.<b>API</b></h4>
-
-      <!-- TITULO DE LA WEB -->
-      <h1>AGENT <b>FINDER</b></h1>
-
-    </div>
-
-    <!-- CONTAINER DE INPUT DE LA WEB -->
-    <form class="input-container">
-
-      <!-- INPUT (ACÁ INTRODUCIS EL NOMBRE DEL PERSONAJE PARA CAMBIAR TODO EL CONTENIDO)-->
-      <input type="text" id="agent-name" placeholder="Search an agent..." />
-
-    </form>
-
-    <!-- CONTAINER DE LA INFO DEL PERSONAJE Y LA IMAGEN -->
-    <div class="web-agent-content-container">
-
-      <!-- CONTAINER DEL LADO IZQUIERDO (PC) O LADO DE ABAJO(MOVIL) -->
-      <div class="web-agent-info-container">
-        
-        <!-- CONTAINER DE DATOS DE PERSONAJE -->
-        <div class="agent-text-container">
-
-          <!-- CONTAINER DE NOMBRE Y DESCRIPCION DE PERSONAJE -->
-          <div class="agent-name-desc-container">
-
-
-          <!-- CONTAINER DE NOMBRE Y DESCRIPCION DE HABILIDAD DE PERSONAJE -->
-          <div class="agent-ability-desc-container">
-
-
-        </div>
-
-        <!-- CONTAINER DE CAMBIADOR DE HABILIDADES DE PERSONAJE (SE CAMBIA CON UN CLICK EN CADA ICONO) -->
-        <div class="agent-ability-changer-container">
-
-        </div>
+        <!-- TITULO DE LA WEB -->
+        <h1>AGENT <b>FINDER</b></h1>
       </div>
 
-      <!-- CONTAINER DE LADO DERECHO (PC) O LADO DE ABAJO (MOVIL) -->
-      <div class="web-agent-img-container">
+      <!-- CONTAINER DE INPUT DE LA WEB -->
+      <form class="input-container">
+        <!-- INPUT (ACÁ INTRODUCIS EL NOMBRE DEL PERSONAJE PARA CAMBIAR TODO EL CONTENIDO)-->
+        <input type="text" id="agent-name" placeholder="Search an agent..." />
+      </form>
 
+      <!-- CONTAINER DE LA INFO DEL PERSONAJE Y LA IMAGEN -->
+      <div class="web-agent-content-container">
+        <!-- CONTAINER DEL LADO IZQUIERDO (PC) O LADO DE ABAJO(MOVIL) -->
+        <div class="web-agent-info-container">
+          <!-- CONTAINER DE DATOS DE PERSONAJE -->
+          <div class="agent-text-container">
+            <!-- CONTAINER DE NOMBRE Y DESCRIPCION DE PERSONAJE -->
+            <div class="agent-name-desc-container"></div>
+
+            <!-- CONTAINER DE NOMBRE Y DESCRIPCION DE HABILIDAD DE PERSONAJE -->
+            <div class="agent-ability-desc-container"></div>
+
+            <!-- CONTAINER DE CAMBIADOR DE HABILIDADES DE PERSONAJE (SE CAMBIA CON UN CLICK EN CADA ICONO) -->
+            <div class="agent-ability-changer-container">
+            </div>
+          </div>
+
+          <!-- CONTAINER DE LADO DERECHO (PC) O LADO DE ABAJO (MOVIL) -->
+          <div class="web-agent-img-container">
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <img src="https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/abilities/ability1/displayicon.png" alt="">
-
-  <!-- SCRIPT LINK -->
-  <script src="/request.js"></script>
-  <script src="/script.js"></script>
-</body>
-
+    <!-- SCRIPT LINK -->
+    <script src="/request.js"></script>
+    <script src="/script.js"></script>
+  </body>
 </html>
